@@ -4,11 +4,11 @@ on:
   push:
   pull_request:
 
-  jobs:
+jobs:
   test-notebook:
     runs-on: ubuntu-latest
-
-    steps:
+    
+steps:
 
       - name: Set up Python
         with:
