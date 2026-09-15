@@ -25,7 +25,7 @@ jobs:
       - name: Run notebook
         run: |
           jupyter nbconvert \
-            --python_cpp\python_fun\
+            --to notebook \
             --execute \
             --ExecutePreprocessor.timeout=600 \
             --output executed.ipynb \
