@@ -29,4 +29,4 @@ jobs:
             --execute \
             --ExecutePreprocessor.timeout=600 \
             --output executed.ipynb \
-            fvm_fem.ipynb
+            python_cpp/python_fun/fvm_fem.ipynb
