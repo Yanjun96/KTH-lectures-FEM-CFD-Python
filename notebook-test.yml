@@ -1,0 +1,28 @@
+name: Test Jupyter Notebook
+
+on:
+  push:
+  pull_request:
+
+  jobs:
+  test-notebook:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Set up Python
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run notebook
+        run: |
+          jupyter nbconvert \
+            --python_cpp\python_fun\
+            --execute \
+            --ExecutePreprocessor.timeout=600 \
+            fvm_fem.ipynb
